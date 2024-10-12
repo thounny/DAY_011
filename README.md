@@ -1,4 +1,4 @@
-# Responsive Overlay Navigation Menu | Responsive Menu
+# DAY_011 | Responsive Overlay Navigation Menu
 
 This project is part of my **Daily Code Challenge** series, where I recreate and build captivating web elements. This project focuses on building a **Responsive Overlay Navigation Menu** using **HTML**, **CSS**, and **JavaScript (GSAP)** for smooth animations. The design is inspired by the Awwwards website [Rejouice](https://rejouice.com/).
 
