@@ -1,0 +1,283 @@
+:root {
+  --color-primary-blue: #0000ff;
+  --color-black: #000000;
+  --color-white: #ffffff;
+}
+
+@font-face {
+  font-family: "Helvetica Neue";
+  src: url("./helveticaneue.woff2");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  background: var(--color-white);
+  color: var(--color-black);
+  font-family: "Helvetica Neue";
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: var(--color-black);
+  transition: color 0.3s ease;
+}
+
+i {
+  position: relative;
+  top: 1px;
+}
+
+.img-logo {
+  height: 50px;
+  width: 50px;
+  filter: invert();
+  transition: filter 0.3s ease;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 2em;
+  background: var(--color-white);
+  color: var(--color-primary-blue);
+  z-index: 0;
+}
+
+.website-content {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 2em;
+  color: var(--color-black);
+  background: var(--color-white);
+}
+
+.main-heading {
+  font-size: 48px;
+  font-weight: bold;
+  line-height: 1.1;
+  text-transform: uppercase;
+  text-align: left;
+  margin-bottom: 1em;
+  color: var(--color-primary-blue);
+}
+
+.description {
+  font-size: 16px;
+  text-align: left;
+  font-weight: 300;
+  max-width: 800px;
+  margin-bottom: 2em;
+  color: var(--color-primary-blue);
+}
+
+.description p {
+  margin-bottom: 1em;
+}
+
+.menu-open-btn {
+  cursor: pointer;
+}
+
+.menu-overlay {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 2em;
+  background: var(--color-primary-blue);
+  pointer-events: none;
+  clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+  z-index: 1000 !important;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.menu-overlay.open {
+  pointer-events: all;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
+.menu-overlay.open a,
+.menu-overlay.open nav,
+.menu-overlay.open .menu-link a,
+.menu-overlay.open .socials a {
+  color: var(--color-white);
+}
+
+.menu-overlay.open .menu-footer-copy .slogan p {
+  color: var(--color-white);
+}
+
+.menu-close-btn {
+  cursor: pointer;
+}
+
+.menu-nav {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1em;
+  color: var(--color-white);
+}
+
+.menu-cols {
+  display: flex;
+}
+
+.menu-cols > div {
+  flex: 1;
+  padding: 1em 0;
+}
+
+.video {
+  width: 50%;
+}
+
+.video-preview {
+  width: 100%;
+  height: 0px;
+  background: url(./assets/tone.webp) 20% 70%;
+  background-size: cover;
+  border-radius: 5px;
+}
+
+.video-details {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5em 0;
+  color: var(--color-white);
+}
+
+.menu-link {
+  position: relative;
+  width: max-content;
+}
+
+.menu-link a {
+  font-size: 40px;
+  color: var(--color-white);
+  transition: color 0.3s ease;
+}
+
+.menu-link:after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--color-white);
+  transition: 0.3s all;
+}
+
+.menu-link:hover.menu-link:after {
+  width: 100%;
+}
+
+.btn {
+  position: relative;
+  margin: 2em 0;
+  border: 1px solid var(--color-white);
+  width: max-content;
+  padding: 1.25em 2.5em;
+  border-radius: 4px;
+  overflow: hidden;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.btn:hover .img-logo {
+  filter: invert(0);
+}
+
+.btn:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background: var(--color-white);
+  transition: 0.3s all;
+  z-index: -1;
+}
+
+.btn:hover a {
+  color: var(--color-white);
+}
+
+.btn:hover.btn:before {
+  width: 100%;
+}
+
+.menu-footer {
+  display: flex;
+  flex-direction: column;
+  color: var(--color-white);
+}
+
+.menu-divider {
+  width: 0%;
+  height: 1px;
+  background: var(--color-white);
+  margin: 1em 0;
+}
+
+.menu-footer-copy {
+  display: flex;
+  justify-content: space-between;
+}
+
+.socials {
+  display: flex;
+  gap: 1em;
+}
+
+.socials a {
+  color: var(--color-white);
+}
+
+@media (max-width: 900px) {
+  .main-heading {
+    font-size: 32px;
+  }
+
+  .description {
+    font-size: 14px;
+  }
+
+  .menu-overlay {
+    height: 100vh;
+  }
+
+  .menu-cols {
+    display: block;
+  }
+
+  .video-preview {
+    height: 125px;
+  }
+
+  .menu-link a {
+    font-size: 30px;
+  }
+}
