@@ -11,13 +11,13 @@ Check it out here: [Rejouice](https://rejouice.com/).
 
 ## Inspiration
 
-![Inspiration](./assets/DAY_011_1.gif)
+![Inspiration](./assets/DAY_011_2.gif)
 
 ---
 
 ## Visual Demo
 
-![Visual Demo](./assets/DAY_011_2.gif)
+![Visual Demo](./assets/DAY_011_1.gif)
 
 ## Features
 
